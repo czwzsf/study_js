@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用js对表单元素进行设置002</title>
+    <script type="text/javascript" src="/js/old/js对表单元素进行设置002.js"></script>
+</head>
+<body onload="ymd(),initLogo()">
+<form action="#">
+    <select name="yyyy" id="yyyy">
+    </select><label for="yyyy" onchange="turnSelect()">年</label>
+    <select name="mm" id="mm" onchange="turnSelect()">月</select>
+    <label for="mm">月</label>
+    <select name="dd" id="dd"></select>
+    <label for="dd">日</label>
+    <input type="button" value="删除列表框条目"><br>
+    <img id="logo_img" src="/image/headLogo/1.gif">
+    <label for="logo"></label><select id="logo" onchange="selectLogo()"></select>
+</form>
+</body>
+</html>
