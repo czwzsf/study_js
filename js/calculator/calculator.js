@@ -117,11 +117,6 @@ function isNull(n) {
 }
 
 function isNumber(n) {
-    // if(!isNaN(n)){
-    //   	return true;//参数n是数字
-    // }else{
-    // 	   return false;//参数n不是数字
-    // }
     return !isNaN(n);
 }
 
