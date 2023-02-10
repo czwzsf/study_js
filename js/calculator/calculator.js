@@ -1,15 +1,11 @@
 function init() {
-    var num = document.getElementById("num");
+    let num = document.getElementById("num");
     num.value = 0;
     num.disabled = "disabled";
-    // var n1=document.getElementById("n1");
-    // n1.onclick=function(){
-    // 	alert("123");
-    // }
-    var oButton = document.getElementsByTagName("input");
-    var btn_num1;
-    var fh;
-    for (var i = 0; i < oButton.length; i++) {
+    let oButton = document.getElementsByTagName("input");
+    let btn_num1;
+    let fh;
+    for (let i = 0; i < oButton.length; i++) {
         oButton[i].onclick = function () {
             if (isNumber(this.value)) {
                 //num.value=(num.value+this.value)*1;
@@ -20,7 +16,7 @@ function init() {
                 }
             } else {
                 //alert("fei");
-                var btn_num = this.value;
+                let btn_num = this.value;
 
                 switch (btn_num) {
                     case "+":
@@ -70,7 +66,7 @@ function init() {
                                 //console.log(btn_num1);
                                 break;
                             case "/":
-                                if (Number(num.value) == 0) {
+                                if (Number(num.value) === 0) {
                                     alert("除数不能是0");
                                     num.value = 0;
                                 } else {
@@ -109,7 +105,7 @@ function back(n) {
 
 /*小数点*/
 function dec_number(n) {
-    if (n.indexOf(".") == -1) {
+    if (n.indexOf(".") === -1) {
         n = n + ".";
     }
     return n;
@@ -117,11 +113,7 @@ function dec_number(n) {
 
 /*验证文本框是否为空或者0*/
 function isNull(n) {
-    if (n == "0" || n.length == 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return n === "0" || n.length === 0;
 }
 
 function isNumber(n) {
